@@ -111,6 +111,7 @@ namespace Content.Server.GameTicking.Commands
 
             shell.ExecuteCommand("sudo cvar events.enabled false");
             shell.ExecuteCommand($"tp 0 0 {mapId}");
+            shell.ExecuteCommand($"autosavemap {mapId}");
             shell.RemoteExecuteCommand("mappingclientsidesetup");
             mapManager.SetMapPaused(mapId, true);
 
